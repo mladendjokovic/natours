@@ -17,3 +17,32 @@
 		animation: moveInRight 1s ease-out;
 	}
 }
+
+.heading-secondary {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 3.5rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, $color-secondary, $color-tertiary);
+	-webkit-background-clip: text;
+	color: transparent;
+	transition: all .2s;
+	&:hover {
+		transform: skewY(2deg) skewX(20deg) scale(1.1);
+		text-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+	}
+}
+
+.heading-tertiary {
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.paragraph {
+	font-size: 1.6rem;
+	font-weight: 400;
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}

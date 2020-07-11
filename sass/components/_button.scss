@@ -50,3 +50,25 @@
 		transition: all 0.3s;
 	}
 }
+
+.btn-text {
+	&:link,
+	&:visited {
+		text-decoration: none;
+		display: inline-block;
+		color: $color-primary;
+		border-bottom: 2px solid $color-primary;
+		font-size: 1.6rem;
+		padding: 3px;
+	}
+	&:hover {
+		background-color: $color-primary;
+		color: #fff;
+		transform: translateY(-3px);
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+	}
+	&:active {
+		transform: translateY(0);
+		box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+	}
+}
