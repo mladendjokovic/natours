@@ -2,9 +2,26 @@
 	max-width: $max-width;
 	width: 90%;
 	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
 	.col-1-of-2 {
-		width: calc(50% - 2rem);
+		float: left;
+		width: calc((100% - #{$gutter})/2);
+		&:not(:last-child) {
+			margin-right: $gutter;
+		}
 	}
+	.col-1-of-3 {
+		float: left;
+		width: calc((100% - 2 * #{$gutter}) / 3);
+		&:not(:last-child) {
+			margin-right: $gutter;
+		}
+	}
+	.col-1-of-4 {
+		float: left;
+		width: calc((100% - 3 * #{$gutter})/4);
+		&:not(:last-child) {
+			margin-right: $gutter;
+		}
+	}
+	@include clear;
 }
