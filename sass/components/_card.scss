@@ -1,20 +1,133 @@
 .card {
 	height: 50rem;
 	width: 100%;
-	background-color: $color-white;
-	border-radius: 3px;
 	font-size: 1.5rem;
 	position: relative;
-	backface-visibility: hidden;
-	transition: all 7s;
-	&__front-side {
+	perspective: 150rem;
+	&__side {
+		border-radius: 3px;
+		overflow: hidden;
+		backface-visibility: hidden;
 		position: absolute;
-		height: 50rem;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: all .8s ease;
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+		&--front {
+			background-color: $color-white;
+		}
+		&--back {
+			transform: rotateY(180deg);
+		}
+	}
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
 	}
 
-	&__back-side {
+	&:hover &__side--back {
+		transform: rotateY(0);
+	}
+	&__img {
+		height: 23rem;
+		background-size: cover;
+		background-blend-mode: screen;
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		&--1 {
+			background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark),
+				url('../img/nat-5.jpg');
+		}
+		&--2 {
+			background-image: linear-gradient(to right, $color-secondary, $color-tertiary), url('../img/nat-6.jpg');
+		}
+		&--3 {
+			background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark),
+				url('../img/nat-7.jpg');
+		}
+	}
+	&__heading {
 		position: absolute;
-		height: 50rem;
-		z-index: -1;
+		top: 12rem;
+		right: 2rem;
+		text-transform: uppercase;
+		font-weight: 300;
+		color: $color-white;
+		font-size: 2.8rem;
+		width: 75%;
+		text-align: right;
+		&-span {
+			padding: 1rem 1.5rem;
+			box-decoration-break: clone;
+			&--1 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-secondary-light, .85),
+					rgba($color-secondary-dark, .85)
+				);
+			}
+			&--2 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-secondary, .85),
+					rgba($color-tertiary, .85)
+				);
+			}
+			&--3 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-tertiary-light, .85),
+					rgba($color-tertiary-dark, .85)
+				);
+			}
+		}
+	}
+	&__details {
+		ul {
+			width: 80%;
+			margin: 0 auto;
+			list-style: none;
+			text-align: center;
+			li {
+				padding: 1rem 0;
+				&:not(:last-child) {
+					border-bottom: 1px solid $color-grey-light;
+				}
+			}
+		}
+	}
+	&__side--back {
+		&-1 {
+			background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+		}
+		&-2 {
+			background-image: linear-gradient(to right, $color-secondary, $color-tertiary);
+		}
+		&-3 {
+			background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
+		}
+	}
+	&__cta {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+		text-align: center;
+	}
+	&__price-box {
+		text-align: center;
+		color: $color-white;
+		margin-bottom: 8rem;
+	}
+
+	&__price-only {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+	}
+
+	&__price-value {
+		font-size: 6rem;
+		font-weight: 100;
 	}
 }

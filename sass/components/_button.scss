@@ -32,6 +32,10 @@
 			background-color: #fff;
 		}
 	}
+	&--green {
+		background-color: $color-primary;
+		color: $color-white;
+	}
 
 	&--animated {
 		animation: moveInBottom .4s ease-out 0.7s backwards;
