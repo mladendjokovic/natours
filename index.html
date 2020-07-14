@@ -255,19 +255,23 @@
                                     <label for="email" class="form__label">Email Address</label>
                                 </div>
                                 <div class="form__group">
-                                    <div class="form__group-radio">
-                                        <input type="radio" id="small" class="form__input-radio" name="size">
-                                        <span class="form__group-radio-span"></span>
-                                        <label for="small" class="form__label-radio">Small Group</label>
+                                    <div class="form__group--radio">
+                                        <input type="radio" id="small" class="form__input--radio" name="size">
+                                        <label for="small" class="form__label--radio">
+                                            <span class="form__group--radio-span"></span>
+                                            Small Group
+                                        </label>
                                     </div>
-                                    <div class="form__group-radio">
-                                        <input type="radio" id="large" class="form__input-radio" name="size">
-                                        <span class="form__group-radio-span"></span>
-                                        <label for="large" class="form__label-radio">Large Group</label>
+                                    <div class="form__group--radio">
+                                        <input type="radio" id="large" class="form__input--radio" name="size">
+                                        <label for="large" class="form__label--radio">
+                                            <span class="form__group--radio-span"></span>
+                                            Large Group
+                                        </label>
                                     </div>
-                                    <div class="form__group">
-                                        <button class="btn btn--green">next step &rarr;</button>
-                                    </div>
+                                </div>
+                                <div class="form__group margin-top-medium">
+                                    <button class="btn btn--green">next step &rarr;</button>
                                 </div>
                             </form>
                         </div>
@@ -275,5 +279,37 @@
                 </div>
             </section>
         </main>
+        <footer class="footer">
+            <div class="footer__logo-box margin-medium">
+                <img src="./img/logo-green-1x.png" alt="logo" class="footer__logo-img">
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Company</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Contact us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Carrers</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Privacy</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Built by <a href="#" class="footer__link">Mladen</a>, designed by Jonas Schmedtmann.
+                        Copyright &copy; 2020.
+                    </p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
