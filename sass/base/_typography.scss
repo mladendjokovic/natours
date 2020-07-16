@@ -23,7 +23,7 @@
 	text-transform: uppercase;
 	font-size: 3.5rem;
 	font-weight: 700;
-	background-image: linear-gradient(to right, $color-secondary, $color-tertiary);
+	background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
 	-webkit-background-clip: text;
 	color: transparent;
 	transition: all .2s;
