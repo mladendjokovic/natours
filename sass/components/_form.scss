@@ -34,7 +34,7 @@
 		display: block;
 		opacity: 1;
 		visibility: visible;
-		transform: translate(0);
+		transform: translateY(0);
 		transition: all .2s;
 	}
 	&__input:placeholder-shown + &__label {
